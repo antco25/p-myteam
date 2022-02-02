@@ -1,0 +1,64 @@
+@use "../styles/colors.scss";
+
+.form {
+    display: inline-block;
+    position: relative;
+
+    &.primary-1 input,
+    &.primary-1 textarea {
+        display: inline-block;
+        padding: 0 14px 16px 14px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid colors.$primary-3;
+        font-family: inherit;
+        font-size: 15px;
+        line-height: 25px;
+        color: white;
+        outline: none;
+        width: 100%;
+        box-sizing: border-box;
+
+        &::placeholder {
+            opacity: 0.6;
+        }
+    }
+
+    &.primary-1 textarea {
+        resize: none;
+        overflow: hidden;
+        height: 82px;
+    }
+
+    &.primary-1.active {
+        input, textarea {
+            border-bottom-color: colors.$secondary-1;
+        }
+    }
+
+    &.primary-1 {
+        input:focus, textarea:focus {
+            border-bottom-color: colors.$secondary-1;
+        }
+    }
+
+    &.primary-1.error {
+        input,
+        textarea {
+            border-bottom-color: colors.$primary-2;
+            color: colors.$primary-2;
+        }
+
+        &::after {
+            font-size: 0.625rem;
+            line-height: 12.55px;
+            font-style: italic;
+            color: colors.$primary-2;
+            content: "This field is required";
+
+            position: relative;
+            top: 1px;
+            
+        }
+    }
+}

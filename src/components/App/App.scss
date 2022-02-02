@@ -1,0 +1,33 @@
+@use "../styles/colors.scss";
+@use "../styles/media.scss";
+@use "../styles/styles.scss";
+
+.App {
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$primary-1;
+    color: colors.$primary-3;
+    text-align: center;
+    min-height: 100vh;
+    @include styles.list-default;
+    @include styles.header;
+    
+    .section-wrap {
+        max-width: styles.$app-width;
+        margin: auto;
+    }
+
+    @include media.for-size(mobile) {
+        width: 375px;
+    }
+
+    hr {
+        border: none;
+        width: 3.125rem;
+        height: 4px;
+    }
+
+    .footer {
+        flex-grow: 1;
+    }
+}

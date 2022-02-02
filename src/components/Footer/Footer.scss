@@ -1,0 +1,194 @@
+@use "../styles/styles.scss";
+@use "../styles/colors.scss";
+@use "../styles/media.scss";
+
+.footer {
+    background-color: colors.$secondary-5;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+
+    .f-wrapper {
+        @include styles.app-padding;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        @include media.for-size(b3) {
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+        }
+
+        @include media.for-size(b5) {
+            padding-top: 4.125rem;
+            padding-bottom: 4rem;
+        }
+
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto;
+
+        .f-logo {
+            grid-area: logo;
+        }
+
+        .f-nav {
+            grid-area: nav;
+            justify-self: start;
+            align-self: end;
+        }
+
+        .f-contact {
+            grid-area: contact;
+            justify-self: start;
+
+            @include media.for-size(b3) {
+                justify-self: end;
+            }
+        }
+
+        .f-socials {
+            grid-area: socials;
+            justify-self: end;
+
+            @include media.for-size(b3) {
+                justify-self: start;
+            }
+        }
+
+        .f-copyright {
+            grid-area: copyright;
+            justify-self: end;
+            align-self: end;
+        }
+
+        @include media.for-size(b5) {
+            .f-logo,
+            .f-nav,
+            .f-contact,
+            .f-socials,
+            .f-copyright {
+                justify-self: center;
+            }
+        }
+
+        grid-template-areas:
+            "logo contact socials"
+            "nav contact copyright";
+
+        @include media.for-size(b3) {
+            grid-template-columns: auto 1fr;
+
+            grid-template-areas:
+                "logo contact"
+                "nav contact"
+                "socials copyright";
+        }
+
+        @include media.for-size(b5) {
+            grid-template-columns: 1fr;
+            grid-template-areas: "logo" "nav" "contact" "socials" "copyright";
+        }
+    }
+
+    .f-logo {
+        display: block;
+        margin-right: 7.75rem;
+
+        @include media.for-size(b2) {
+            margin-right: 4.5rem;
+        }
+
+        @include media.for-size(b3) {
+            width: 6rem;
+            margin-right: 0;
+        }
+    }
+
+    .f-nav {
+        ul {
+            margin-left: -1.25rem;
+
+            li {
+                display: inline-block;
+                margin: 0.125rem 1.25rem;
+            }
+
+            @include media.for-size(b3) {
+                margin-left: -0.75rem;
+
+                li {
+                    margin: 0.125rem 0.75rem;
+                }
+            }
+
+            @include media.for-size(b5) {
+                margin-left: 0;
+
+                li {
+                    margin: 1.5rem 0.75rem;
+                }
+            }
+        }
+
+        ul li a {
+            font-size: 1.125rem;
+            color: colors.$primary-3;
+
+            &:hover {
+                color: colors.$primary-2;
+            }
+
+            @include media.for-size(b3) {
+                font-size: 0.9375rem;
+            }
+        }
+    }
+
+    .f-socials {
+        @include media.for-size(b3) {
+            margin-top: 2rem;
+        }
+
+        @include media.for-size(b5) {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-right: -0.5rem;
+
+            @include media.for-size(b3) {
+                margin-right: 0;
+                margin-left: -0.5rem;
+            }
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+
+        ul li a {
+            &:hover svg path {
+                fill: colors.$primary-2;
+            }
+        }
+    }
+
+    .f-contact {
+        opacity: 0.6;
+        text-align: left;
+
+        @include media.for-size(b3) {
+            text-align: right;
+        }
+
+        @include media.for-size(b5) {
+            text-align: center;
+        }
+    }
+
+    .f-copyright {
+        opacity: 0.6;
+        text-align: left;
+    }
+}

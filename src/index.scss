@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Livvic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.scroll-lock {
+    overflow-y: hidden;
+  }
+}
+
+html, body, #root {
+  min-height: 100vh;
+}

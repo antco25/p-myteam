@@ -1,0 +1,161 @@
+@use "../styles/colors.scss";
+@use "../styles/buttons.scss";
+@use "../styles/styles.scss";
+@use "../styles/media.scss";
+
+.header {
+    .h-wrapper {
+        display: flex;
+        align-items: center;
+        @include styles.app-padding;
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+
+        @include media.for-size(b3) {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        @include media.for-size(mobile) {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+    .h-logo {
+        margin-right: 3.75rem;
+
+        @include media.for-size(b3) {
+            width: 8rem;
+            margin-right: 1.75rem;
+        }
+
+        @include media.for-size(b4) {
+            margin-right: auto;
+            margin-top: 0.5rem;
+        }
+
+        @include media.for-size(mobile) {
+            margin-top: 0;
+        }
+    }
+
+    .h-hamburger {
+        cursor: pointer;
+        display: none;
+    }
+
+    .h-nav {
+        flex-grow: 1;
+
+        .n-wrapper {
+            display: flex;
+            align-items: center;
+
+            @include media.for-size(b4) {
+                display: block;
+            }
+        }
+
+        .n-close {
+            display: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            margin-right: auto;
+        }
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 1.25rem;
+        }
+
+        li a {
+            color: colors.$primary-3;
+            text-decoration: none;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+
+            &:hover {
+                color: colors.$primary-2;
+            }
+        }
+
+        button {
+            @include buttons.primary-light;
+        }
+
+        a {
+            @include buttons.primary-light;
+        }
+    }
+
+    /*  MOBILE MENU */
+    @include media.for-size(b4) {
+        .h-hamburger {
+            display: inline;
+        }
+
+        .h-nav {
+            visibility: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+
+            &.h-nav-active {
+                visibility: visible;
+            }
+
+            .n-wrapper {
+                background: colors.$secondary-2 url("./bg-pattern-about-1-mobile-nav-1.svg") no-repeat;
+                background-position: bottom 0 right -6.25rem;
+                width: 16rem; //256px
+                height: 100%;
+                box-sizing: border-box;
+                margin-left: auto;
+                padding: 2.5rem 3rem;
+                text-align: left;
+                position: relative;
+                right: -16rem;
+                transition: .2s;
+            }
+
+            &.h-nav-active .n-wrapper {
+                right: 0;
+            }
+
+            .n-close {
+                display: inline;
+                cursor: pointer;
+                margin: 1rem 0;
+                margin-left: 10.25rem;
+
+                &:hover path {
+                    fill: colors.$primary-2;
+                }
+            }
+
+            ul {
+                display: block;
+            }
+
+            ul li {
+                margin: 1.5rem 0;
+                display: block;
+            }
+
+            .n-wrapper > a {
+                margin: 0.75rem 0;
+                display: inline-block;
+            }
+        }
+    }
+}

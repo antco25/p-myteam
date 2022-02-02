@@ -1,0 +1,96 @@
+@use "../../../components/styles/colors.scss";
+
+$b-width: 1rem;
+$b-padding: 1.25rem;
+
+.about-card {
+    font-size: 0.9375rem;
+
+    .wrapper {
+        max-width: 21.875rem; //350px
+        background-color: colors.$secondary-4;
+        padding: 2rem 1.5rem;
+        padding-bottom: initial;
+        margin-bottom: calc($b-width/2 + $b-padding);
+        position: relative;
+        box-sizing: border-box;
+        height: calc(17.5rem - $b-width/2 - $b-padding); //280px
+    }
+
+    span {
+        display: block;
+    }
+    .avatar {
+        border-radius: 50%;
+        border: 0.125rem solid #C4FFFE;
+        width: 6rem;
+        margin-bottom: 0.875rem;
+    }
+
+    .name {
+        color: colors.$secondary-1;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.75rem;
+    }
+
+    .title {
+        font-style: italic;
+        line-height: 1.5625rem;
+    }
+
+    .quote {
+        margin: 1rem 1.375rem;
+        margin-top: 0.5rem;
+        line-height: 1.5625rem;
+    }
+
+    .socials {
+        ul li {
+            margin: 0.5rem;
+            display: inline-block;
+        }
+
+        ul li a:hover svg path {
+            fill: colors.$primary-2;           
+        }
+    }
+
+    .flip-button {
+        width: $b-width;
+        padding: $b-padding;
+        position: absolute;
+        bottom: calc($b-width/-2 - $b-padding);
+        left: calc(50% - $b-width/2 - $b-padding);
+        background-color: colors.$primary-2;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            background-color: colors.$secondary-1;
+        }
+    }
+
+    .quote, .socials {
+        visibility: hidden;
+    }
+}
+
+.about-card.flip {
+    .avatar, .title {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .quote, .socials {
+        visibility: visible;
+    }
+
+    .flip-button {
+        background-color: colors.$secondary-1;
+
+        &:hover {
+            background-color: colors.$primary-2;
+        }
+    }
+}

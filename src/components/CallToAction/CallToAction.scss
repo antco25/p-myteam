@@ -1,0 +1,76 @@
+@use "../styles/colors.scss";
+@use "../styles/buttons.scss";
+@use "../styles/media.scss";
+@use "../styles/styles.scss";
+
+.call-to-action {
+    color: colors.$secondary-4;
+    padding-top: 4.75rem;
+    padding-bottom: 4.75rem;
+    background: colors.$secondary-2 url("./bg-pattern-home-6-about-5.svg") no-repeat;
+    background-color: colors.$primary-2;
+
+    $bg-width: 200px;
+    background-position: bottom 0 left calc(50% - #{styles.$app-width/2} - #{$bg-width/2} + 35px);
+
+    @media (max-width: 1440px) {
+        background-position: bottom 0 left 0;
+    }
+
+    @media (max-width: 1244px) {
+        background-position: bottom -1.375rem left 0;
+    }
+
+    @media (max-width: 700px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    @include media.for-size(b5) {
+        padding-top: 5.25rem;
+        padding-bottom: 5.25rem;
+    }
+
+    .cta-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include media.for-size(b3) {
+            margin: 0 3.5rem;
+        }
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            margin: 0;
+        }
+    }
+
+    h2 {
+        display: inline-block;
+        margin-right: 16.25rem;
+        text-align: left;
+
+        @media (max-width: 1244px) {
+            font-size: 2.5rem;
+            margin-right: 3rem;
+        }
+
+        @include media.for-size(b3) {
+            font-size: 2rem;
+            margin-right: 0;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 700px) {
+            display: block;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    a {
+        @include buttons.primary-dark;
+        display: inline-block;
+    }
+}

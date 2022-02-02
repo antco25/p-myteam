@@ -1,0 +1,352 @@
+@use "../../components/styles/colors.scss";
+@use "../../components/styles/styles.scss";
+@use "../../components/styles/media.scss";
+
+.home-page {
+    font-size: 0.9375rem;
+
+    > * {
+        @include styles.app-padding;
+    }
+
+    .h-header {
+        padding-top: 3.625rem;
+        text-align: left;
+        background: url("./images/background/bg-pattern-home-1.svg") no-repeat;
+        $bg-width: 200px;
+        background-position: top 3.625rem left calc(50% - #{styles.$app-width/2} - #{$bg-width/2} - 65px);
+
+        @media (max-width: 1440px) {
+            background-position: top 3.625rem left -6.25rem;
+        }
+
+        @media (max-width: 1330px) {
+            background: none;
+        }
+
+        @include media.for-size(b2) {
+            text-align: center;
+        }
+
+        @include media.for-size(b3) {
+            padding-top: 48px;
+            padding: 48px 0 0 0;
+            background: none;
+        }
+
+        @include media.for-size(mobile) {
+            padding-top: 2rem;
+        }
+
+        .section-wrap {
+            padding-bottom: 250px;
+            background: url("./images/background/bg-pattern-home-2.svg") no-repeat;
+            background-position: bottom 0 right 0;
+            display: flex;
+            column-gap: 30px;
+
+            @include media.for-size(b2) {
+                flex-direction: column;
+                align-items: center;
+                background-position: bottom 0 center;
+            }
+
+            @include media.for-size(b3) {
+                padding-bottom: 256px;
+            }
+
+            @include media.for-size(mobile) {
+                padding-bottom: 197px;
+            }
+        }
+
+        h1 {
+            font-size: 6.25rem;
+            line-height: 1;
+            max-width: 635px;
+            flex: 1.1 1 0px;
+
+            @include media.for-size(b1) {
+                font-size: 86px;
+                margin-bottom: 24px;
+            }
+
+            @include media.for-size(b3) {
+                font-size: 64px;
+                line-height: 56px;
+            }
+
+            @include media.for-size(mobile) {
+                font-size: 2.5rem;
+                line-height: 1;
+                margin-bottom: 18px;
+            }
+
+            span {
+                color: colors.$primary-2;
+            }
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            max-width: 445px;
+            flex: 1 1 0px;
+
+            @include media.for-size(b3) {
+                font-size: 0.9375rem;
+                padding: 0 2.5rem;
+                max-width: 457px;
+            }
+
+            @include media.for-size(mobile) {
+                padding: 0 24px;
+            }
+
+            hr {
+                color: colors.$secondary-1;
+                background-color: colors.$secondary-1;
+                margin: 0 0 5rem 0;
+
+                @include media.for-size(b2) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .h-service {
+        text-align: left;
+        padding-top: 140px;
+        padding-bottom: 140px;
+        background: url("./images/background/bg-pattern-home-3.svg") no-repeat;
+        background-color: colors.$secondary-4;
+
+        $bg-width: 200px;
+        background-position: bottom 0 right calc(50% - #{styles.$app-width/2} - #{$bg-width/2} - 65px);
+
+        @media (max-width: 1440px) {
+            background-position: bottom 0 right -6.25rem;
+        }
+
+        @media (max-width: 1340px) {
+            background-position: top 0 right -6.25rem;
+        }
+
+        @include media.for-size(b3) {
+            background-position: top 0 right -6.25rem;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        @include media.for-size(mobile) {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .section-wrap {
+            display: flex;
+
+            @include media.for-size(b3) {
+                max-width: 572px;
+                flex-direction: column;
+            }
+        }
+
+        hr {
+            color: colors.$primary-2;
+            background-color: colors.$primary-2;
+            margin: 0 0 3.375rem 0;
+
+            @include media.for-size(b3) {
+                margin: 0 0 2rem 0;
+            }
+        }
+
+        h2 {
+            max-width: 445px;
+            margin-right: auto;
+
+            @include media.for-size(b2) {
+                max-width: 350px;
+                font-size: 36px;
+            }
+
+            @include media.for-size(b3) {
+                max-width: 445px;
+                margin-right: 0;
+                font-size: 2rem;
+            }
+
+            @media (max-width: 580px) {
+                max-width: 300px;
+            }
+
+            @media (max-width: 430px) {
+                max-width: 15rem;
+            }
+        }
+
+        .s-content {
+            max-width: 540px;
+            margin-top: 58px;
+
+            @include media.for-size(b3) {
+                margin-top: 64px;
+            }
+
+            @include media.for-size(mobile) {
+                margin-top: 3.5rem;
+            }
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 2rem;
+
+                @include media.for-size(mobile) {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    margin-bottom: 48px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                img {
+                    margin-right: 1.5rem;
+
+                    @include media.for-size(mobile) {
+                        margin-right: 0;
+                    }
+                }
+
+                .title {
+                    color: colors.$primary-2;
+                    font-size: 1.125rem;
+                    line-height: 1.75rem;
+                    margin-bottom: 1rem;
+
+                    @include media.for-size(mobile) {
+                        margin-top: 16px;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+
+                p {
+                    line-height: 1.5625rem;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .h-stories {
+        padding-top: 140px;
+        padding-bottom: 140px;
+
+        background: url("./images/background/bg-pattern-home-4-about-3.svg") no-repeat,
+            url("./images/background/bg-pattern-home-5.svg") no-repeat;
+        background-color: colors.$secondary-3;
+
+        $bg-1-width: 147px;
+        $bg-2-width: 200px;
+        background-position: top 0 left calc(50% - #{styles.$app-width/2} - #{$bg-1-width/2} - 18px),
+            bottom 0 right calc(50% - #{styles.$app-width/2} - #{$bg-2-width/2} + 35px);
+
+        @media (max-width: 1440px) {
+            background-position: top 0 left 0, bottom 0 right 0;
+        }
+
+        @include media.for-size(b3) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        @include media.for-size(mobile) {
+            padding-top: 140px;
+            padding-bottom: 164px;
+        }
+
+        h2 {
+            max-width: 932px;
+            margin: 0 auto 56px auto;
+
+            span {
+                color: colors.$secondary-1;
+            }
+
+            @include media.for-size(b3) {
+                max-width: 573px;
+                margin-bottom: 48px;
+            }
+        }
+    }
+
+    .h-stories {
+        .story-wrap {
+            display: flex;
+            column-gap: 30px;
+
+            @include media.for-size(b3) {
+                flex-direction: column;
+                margin: 0 auto;
+                max-width: 573px;
+                row-gap: 48px;
+            }
+        }
+
+        .story-wrap .s-story {
+            padding-top: 2.25rem;
+            background: url("./images/icons/icon-quotes.svg") no-repeat;
+            background-position: top 0 center;
+            flex: 1 1 0px;
+
+            span {
+                display: block;
+            }
+
+            .quote {
+                line-height: 1.5625rem;
+                margin-bottom: 24px;
+
+                @include media.for-size(b3) {
+                    margin-bottom: 16px;
+                }
+            }
+
+            .name {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+                color: colors.$secondary-1;
+                margin-bottom: 0.125rem;
+            }
+
+            .title {
+                font-size: 0.8125rem;
+                line-height: 1.125rem;
+                font-style: italic;
+                margin-bottom: 30px;
+
+                @include media.for-size(b3) {
+                    margin-bottom: 14px;
+                }
+            }
+
+            .avatar {
+                border-radius: 50%;
+                border: 0.125rem solid #c4fffe;
+                width: 3.875rem;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 8px;
+
+                @include media.for-size(b3) {
+                    margin-bottom: -2px;
+                }
+            }
+        }
+    }
+}

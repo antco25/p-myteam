@@ -1,0 +1,59 @@
+@use "colors";
+
+@mixin _common {
+    padding: 0.5rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    border: 0.125rem solid;
+    border-radius: 50px;
+    background-color: transparent;
+    text-decoration: none;
+
+    &:disabled {
+        opacity: 0.25;
+        cursor: default;
+    }
+}
+
+@mixin primary-light {
+    &.primary-light {
+        @include _common;
+        color: colors.$primary-3;
+        border-color: colors.$primary-3;
+
+        &:hover:not(:disabled) {
+            background-color: colors.$primary-3;
+            color: colors.$primary-1;
+        }
+    }
+}
+
+@mixin primary-dark {
+    &.primary-dark {
+        @include _common;
+        color: colors.$secondary-4;
+        border-color: colors.$secondary-4;
+
+        &:hover:not(:disabled) {
+            background-color: colors.$secondary-4;
+            color: colors.$primary-3;
+        }
+    }
+}
+
+@mixin secondary-light {
+    &.secondary-light {
+        @include _common;
+        background-color: colors.$primary-3;
+        color: colors.$primary-1;
+        border-color: colors.$primary-3;
+
+        &:hover:not(:disabled) {
+            background-color: colors.$secondary-1;
+            border-color: colors.$secondary-1;
+        }
+    }
+}

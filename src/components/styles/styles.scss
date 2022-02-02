@@ -1,0 +1,54 @@
+@use "./colors.scss";
+@use "./media.scss";
+
+
+$app-width: 1110px;
+
+@mixin list-default {
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+
+    ul li a {
+        text-decoration: none;
+    }
+}
+
+@mixin header {
+    h1,
+    h2,
+    h3,
+    p {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        line-height: 1;
+
+        @include media.for-size(b3) {
+            font-size: 2rem;
+        }
+    }
+}
+
+@mixin app-padding {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    @include media.for-size(mobile) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+
