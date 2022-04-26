@@ -6,8 +6,9 @@ import HomePage from '../../pages/Home/HomePage';
 import AboutPage from '../../pages/About/AboutPage';
 import ContactPage from '../../pages/Contact/ContactPage';
 
-function AnimRoutes() {
+export const rootURL = '/fm-pro-1';
 
+function AnimRoutes() {
   const key = useLocation().key;
   return (
     <TransitionGroup component={null}>
@@ -19,9 +20,9 @@ function AnimRoutes() {
         appear={true}
       >
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/contact' element={<ContactPage />} />
-          <Route path='/about' element={<AboutPage />} />
+          <Route path={`${rootURL}/home`} element={<HomePage />} />
+          <Route path={`${rootURL}/contact`}  element={<ContactPage />} />
+          <Route path={`${rootURL}/about`}  element={<AboutPage />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
