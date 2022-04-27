@@ -13,7 +13,7 @@ function Footer() {
         <img src={Logo} className='f-logo' />
         <div className='f-nav'>
           <ul>
-            <li><Link to={`${rootURL}/home`}>home</Link></li>
+            <li><Link to={`${rootURL}/`}>home</Link></li>
             <li><Link to={`${rootURL}/about`}>about</Link></li>
           </ul>
         </div>

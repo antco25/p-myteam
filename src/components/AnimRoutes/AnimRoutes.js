@@ -20,7 +20,7 @@ function AnimRoutes() {
         appear={true}
       >
         <Routes>
-          <Route path={`${rootURL}/home`} element={<HomePage />} />
+          <Route path={`${rootURL}/`} element={<HomePage />} />
           <Route path={`${rootURL}/contact`}  element={<ContactPage />} />
           <Route path={`${rootURL}/about`}  element={<AboutPage />} />
         </Routes>

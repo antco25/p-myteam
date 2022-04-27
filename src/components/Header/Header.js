@@ -30,7 +30,7 @@ function Header() {
                     <div className='n-wrapper'>
                         <IconClose className='n-close' onClick={() => setMenuOpen(false)} />
                         <ul>
-                            <li><Link to={`${rootURL}/home`} onClick={() => setMenuOpen(false)}>home</Link></li>
+                            <li><Link to={`${rootURL}/`} onClick={() => setMenuOpen(false)}>home</Link></li>
                             <li><Link to={`${rootURL}/about`} onClick={() => setMenuOpen(false)}>about</Link></li>
                         </ul>
                         <Link to={`${rootURL}/contact`} className='primary-light' onClick={() => setMenuOpen(false)}>contact us</Link>
