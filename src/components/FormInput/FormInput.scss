@@ -37,7 +37,7 @@
     }
 
     &.primary-1 {
-        input:focus, textarea:focus {
+        input:focus, input:hover, textarea:focus, textarea:hover {
             border-bottom-color: colors.$secondary-1;
         }
     }

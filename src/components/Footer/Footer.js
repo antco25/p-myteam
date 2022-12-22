@@ -25,9 +25,9 @@ function Footer() {
         </div>
         <div className='f-socials'>
           <ul>
-            <li><a href='/#'><IconFacebook /></a></li>
-            <li><a href='/#'><IconPinterest /></a></li>
-            <li><a href='/#'><IconTwitter /></a></li>
+            <li><a href='https://www.facebook.com'><IconFacebook /></a></li>
+            <li><a href='https://www.pinterest.com'><IconPinterest /></a></li>
+            <li><a href='https://twitter.com'><IconTwitter /></a></li>
           </ul>
         </div>
         <div className='f-copyright'>Copyright 2021. All Rights Reserved</div>

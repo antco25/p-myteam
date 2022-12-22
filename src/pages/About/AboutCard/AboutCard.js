@@ -11,18 +11,18 @@ function AboutCard(props) {
 
   return (
     <div className={`about-card${flipped ? ' flip' : ''}`}>
-      <div className='wrapper'>
+      <div className='wrapper' onClick={()=> setFlipped(!flipped)} >
         <img className='avatar' src={avatar} alt='avatar' />
         <span className='name'>{name}</span>
         <span className='title'>{title}</span>
         <p className='quote'>{quote}</p>
         <div className='socials'>
           <ul>
-            <li><a href='/#'><IconTwitter /></a></li>
-            <li><a href='/#'><IconLinkedIn /></a></li>
+            <li><a href='https://twitter.com'><IconTwitter /></a></li>
+            <li><a href='https://www.linkedin.com'><IconLinkedIn /></a></li>
           </ul>
         </div>
-        <img className={`flip-button`} src={flipped? IconClose : IconCross} onClick={()=> setFlipped(!flipped)} alt='flip icon'/>
+        <img className={`flip-button`} src={flipped? IconClose : IconCross} alt='flip icon'/>
       </div>
     </div>
   )
