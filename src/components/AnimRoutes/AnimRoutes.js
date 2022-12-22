@@ -1,12 +1,10 @@
 import './AnimRoutes.scss';
 import React, { useRef } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { Route, useLocation, Routes } from 'react-router-dom';
+import { Route, useLocation, Routes, Navigate } from 'react-router-dom';
 import HomePage from '../../pages/Home/HomePage';
 import AboutPage from '../../pages/About/AboutPage';
 import ContactPage from '../../pages/Contact/ContactPage';
-
-export const rootURL = '/p-myteam';
 
 function AnimRoutes() {
   const transitionRef = useRef(null);
@@ -25,9 +23,10 @@ function AnimRoutes() {
       >
         <div ref={transitionRef}>
           <Routes>
-            <Route path={`${rootURL}/`} element={<HomePage />} />
-            <Route path={`${rootURL}/contact`} element={<ContactPage />} />
-            <Route path={`${rootURL}/about`} element={<AboutPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
       </CSSTransition>

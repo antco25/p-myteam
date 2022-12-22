@@ -7,7 +7,7 @@ import { BrowserRouter, useLocation } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/p-myteam'>
       <ScrollToTop />
       <App />
     </BrowserRouter>

@@ -5,7 +5,6 @@ import Logo from '../images/logo.svg';
 import IconHamburger from './icon-hamburger.svg';
 import { ReactComponent as IconClose } from './icon-close.svg';
 import { Link } from 'react-router-dom';
-import { rootURL } from '../AnimRoutes/AnimRoutes';
 
 function Header() {
 
@@ -30,10 +29,10 @@ function Header() {
                     <div className='n-wrapper'>
                         <IconClose className='n-close' onClick={() => setMenuOpen(false)} />
                         <ul>
-                            <li><Link to={`${rootURL}/`} onClick={() => setMenuOpen(false)}>home</Link></li>
-                            <li><Link to={`${rootURL}/about`} onClick={() => setMenuOpen(false)}>about</Link></li>
+                            <li><Link to="/" onClick={() => setMenuOpen(false)}>home</Link></li>
+                            <li><Link to="/about" onClick={() => setMenuOpen(false)}>about</Link></li>
                         </ul>
-                        <Link to={`${rootURL}/contact`} className='primary-light' onClick={() => setMenuOpen(false)}>contact us</Link>
+                        <Link to="/contact" className='primary-light' onClick={() => setMenuOpen(false)}>contact us</Link>
                     </div>
                 </nav>
             </div>

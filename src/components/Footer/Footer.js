@@ -4,7 +4,6 @@ import { ReactComponent as IconFacebook } from '../images/socials/icon-facebook.
 import { ReactComponent as IconPinterest } from '../images/socials/icon-pinterest.svg';
 import { ReactComponent as IconTwitter } from '../images/socials/icon-twitter.svg';
 import { Link } from 'react-router-dom';
-import { rootURL } from '../AnimRoutes/AnimRoutes';
 
 function Footer() {
   return (
@@ -13,8 +12,8 @@ function Footer() {
         <img src={Logo} className='f-logo' alt='myteam logo' />
         <div className='f-nav'>
           <ul>
-            <li><Link to={`${rootURL}/`}>home</Link></li>
-            <li><Link to={`${rootURL}/about`}>about</Link></li>
+            <li><Link to="/">home</Link></li>
+            <li><Link to="/about">about</Link></li>
           </ul>
         </div>
         <div className='f-contact'>
