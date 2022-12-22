@@ -24,8 +24,8 @@ function Header() {
     return (
         <div className="header">
             <div className='h-wrapper section-wrap'>
-                <img className='h-logo' src={Logo} />
-                <img className='h-hamburger' src={IconHamburger} onClick={() => setMenuOpen(true)} />
+                <img className='h-logo' src={Logo} alt='myteam logo' />
+                <img className='h-hamburger' src={IconHamburger} onClick={() => setMenuOpen(true)} alt='hamburger'/>
                 <nav className={`h-nav${isMenuOpen ? ' h-nav-active' : ''}`}>
                     <div className='n-wrapper'>
                         <IconClose className='n-close' onClick={() => setMenuOpen(false)} />

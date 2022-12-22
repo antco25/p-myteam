@@ -13,8 +13,8 @@
 
     $bg-1-width: 200px;
     $bg-2-width: 225px;
-    background-position: top 0 left calc(50% - #{styles.$app-width/2} - #{$bg-1-width/2} - 65px),
-        bottom 0 right calc(50% - #{styles.$app-width/2} - #{$bg-2-width/2} - 65px);
+    background-position: top 0 left calc(50% - calc(styles.$app-width/2) - calc($bg-1-width/2) - 65px),
+        bottom 0 right calc(50% - calc(styles.$app-width/2) - calc($bg-2-width/2) - 65px);
 
     @media (max-width: 1440px) {
         background-position: top left -100px, bottom right -112.5px;

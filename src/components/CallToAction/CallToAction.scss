@@ -11,7 +11,7 @@
     background-color: colors.$primary-2;
 
     $bg-width: 200px;
-    background-position: bottom 0 left calc(50% - #{styles.$app-width/2} - #{$bg-width/2} + 35px);
+    background-position: bottom 0 left calc(50% - calc(styles.$app-width/2) - calc($bg-width/2) + 35px);
 
     @media (max-width: 1440px) {
         background-position: bottom 0 left 0;

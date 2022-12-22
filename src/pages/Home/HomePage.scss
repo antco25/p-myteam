@@ -14,7 +14,7 @@
         text-align: left;
         background: url("./images/background/bg-pattern-home-1.svg") no-repeat;
         $bg-width: 200px;
-        background-position: top 3.625rem left calc(50% - #{styles.$app-width/2} - #{$bg-width/2} - 65px);
+        background-position: top 3.625rem left calc(50% - calc(styles.$app-width/2) - calc($bg-width/2) - 65px);
 
         @media (max-width: 1440px) {
             background-position: top 3.625rem left -6.25rem;
@@ -102,15 +102,14 @@
             @include media.for-size(mobile) {
                 padding: 0 24px;
             }
+        }
+        hr {
+            color: colors.$secondary-1;
+            background-color: colors.$secondary-1;
+            margin: 0 0 5rem 0;
 
-            hr {
-                color: colors.$secondary-1;
-                background-color: colors.$secondary-1;
-                margin: 0 0 5rem 0;
-
-                @include media.for-size(b2) {
-                    display: none;
-                }
+            @include media.for-size(b2) {
+                display: none;
             }
         }
     }
@@ -123,7 +122,7 @@
         background-color: colors.$secondary-4;
 
         $bg-width: 200px;
-        background-position: bottom 0 right calc(50% - #{styles.$app-width/2} - #{$bg-width/2} - 65px);
+        background-position: bottom 0 right calc(50% - calc(styles.$app-width/2) - calc($bg-width/2) - 65px);
 
         @media (max-width: 1440px) {
             background-position: bottom 0 right -6.25rem;
@@ -253,8 +252,8 @@
 
         $bg-1-width: 147px;
         $bg-2-width: 200px;
-        background-position: top 0 left calc(50% - #{styles.$app-width/2} - #{$bg-1-width/2} - 18px),
-            bottom 0 right calc(50% - #{styles.$app-width/2} - #{$bg-2-width/2} + 35px);
+        background-position: top 0 left calc(50% - calc(styles.$app-width/2) - calc($bg-1-width/2) - 18px),
+            bottom 0 right calc(50% - calc(styles.$app-width/2) - calc($bg-2-width/2) + 35px);
 
         @media (max-width: 1440px) {
             background-position: top 0 left 0, bottom 0 right 0;

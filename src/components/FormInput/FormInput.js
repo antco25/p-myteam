@@ -4,7 +4,7 @@ function FormInput(props) {
   const { type, inputstate } = props;
 
   let formInput;
-  if (type == 'textarea') {
+  if (type === 'textarea') {
     formInput = <textarea {...props} />
   } else {
     formInput = <input {...props} type={type} />

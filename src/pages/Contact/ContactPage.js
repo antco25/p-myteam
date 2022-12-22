@@ -34,7 +34,7 @@ function ContactPage() {
     const setInputStates = [];
     showSubmitMessage(false);
 
-    Object.keys(formData).map((key) => {
+    Object.keys(formData).forEach((key) => {
       const [value, setValue] = formData[key]['value']
       const setInputState = formData[key]['inputState'][1]
 
@@ -50,7 +50,7 @@ function ContactPage() {
 
     if (formDataValid) {
       //Submit data
-      console.log(validData);
+      //console.log(validData);
 
       //Clear form
       setValues.forEach((setValue) => setValue(''));
@@ -70,9 +70,9 @@ function ContactPage() {
         <div className='c-content'>
           <h2>Ask us about</h2>
           <ul>
-            <li><img src={IconPerson} className='icon-person' /><span>The quality of our talent network</span></li>
-            <li><img src={IconCog} /><span>Usage & implementation of our software</span></li>
-            <li><img src={IconChart} /><span>How we help drive innovation</span></li>
+            <li><img src={IconPerson} alt='person icon' className='icon-person' /><span>The quality of our talent network</span></li>
+            <li><img src={IconCog} alt='cog icon' /><span>Usage & implementation of our software</span></li>
+            <li><img src={IconChart} alt='chart icon'/><span>How we help drive innovation</span></li>
           </ul>
         </div>
         <form className='c-form' onSubmit={handleSubmit}>

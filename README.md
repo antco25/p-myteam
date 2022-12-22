@@ -1,4 +1,4 @@
-# Frontend Mentor - myteam website solution
+# myteam Website 
 
 This is a solution to the [myteam website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://antco25.github.io/fm-pro-1/](https://antco25.github.io/fm-pro-1/)
+- Live Site URL: [https://antcodev.ca/p-myteam/](https://antcodev.ca/p-myteam/)
 
 ## My process
 
@@ -45,4 +45,4 @@ Users should be able to:
 
 ## Author
 
-- [My Portfolio](https://antco25.github.io)
+- [My Portfolio](https://antcodev.ca)

@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className='f-wrapper section-wrap'>
-        <img src={Logo} className='f-logo' />
+        <img src={Logo} className='f-logo' alt='myteam logo' />
         <div className='f-nav'>
           <ul>
             <li><Link to={`${rootURL}/`}>home</Link></li>

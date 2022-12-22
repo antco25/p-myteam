@@ -13,10 +13,13 @@ function HomePage() {
     <div className="home-page">
       <div className='h-header'>
         <div className='section-wrap'>
-          <h1>Find the <br/>best <span>talent</span></h1>
-          <p><hr />Finding the right people and building high performing teams can
-            be hard. Most companies aren’t tapping into the abundance of global
-            talent. We’re about to change that.</p>
+          <h1>Find the <br />best <span>talent</span></h1>
+          <div>
+            <hr />
+            <p>Finding the right people and building high performing teams can
+              be hard. Most companies aren’t tapping into the abundance of global
+              talent. We’re about to change that.</p>
+          </div>
         </div>
       </div>
       <div className='h-service'>
@@ -27,7 +30,7 @@ function HomePage() {
               services.map((service, index) => {
                 return (
                   <li key={index}>
-                    <img src={service.icon} />
+                    <img src={service.icon} alt='service icon' />
                     <div className='item-desc'>
                       <div className='title'>{service.title}</div>
                       <p>{service.content}</p>
@@ -49,7 +52,7 @@ function HomePage() {
                     <div className='quote'>{story.quote}</div>
                     <span className='name'>{story.name}</span>
                     <span className='title'>{story.title}</span>
-                    <img className='avatar' src={story.avatar} />
+                    <img className='avatar' src={story.avatar} alt='avatar' />
                   </div>)
               })
             }

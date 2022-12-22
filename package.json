@@ -1,8 +1,8 @@
 {
-  "name": "fm-pro-1",
+  "name": "p-myteam",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://antco25.github.io/fm-pro-1",
+  "homepage": "https://antcodev.ca/p-myteam",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy" : "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
